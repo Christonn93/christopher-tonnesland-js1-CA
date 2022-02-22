@@ -1,6 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Serif+Display:wght@500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Fira+Sans:wght@200;300&display=swap');
+
 body {
     margin: 0;
     padding: 0;
+
+    font-family: 'Fira Sans', sans-serif;
+    font-weight: 300;
 }
 
 .body-wrapper {
@@ -17,11 +23,13 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     flex: 1;
+    align-items: center;
+    justify-items: center;
 
+    text-transform: capitalize;
     padding: 15px;
-    border: 1px solid black;
-    background-color: beige;
-    min-height: 15px;
+    background-color: #cb9e71;
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.25);
 }
 
 .main {
@@ -30,19 +38,79 @@ body {
     flex-wrap: wrap;
     flex: 1;
 
-    padding: 15px;
-    border: 1px solid black;
-    background-color: wheat;
-    min-height: 15px;
+    margin: 5px;
+    padding: 10px;
+    background-color: #414455;
 }
 
 .container {
-    margin: 25px;
-    padding: 15px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    align-items: flex-start;
 
-    border: 1px solid black;
-    background-color: aliceblue;
-    min-height: 15px;
+    margin: 0 auto;
+}
+
+.book-container {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+
+    padding: 15px;
+    max-width: 400px;
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.25);
+    background-color: #F7F8F6;
+}
+
+.ratio-box {
+    width: 100%;
+    height: 0;
+    padding-top: calc(100% * (9/16));
+    position: relative;
+}
+
+.image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+}
+
+.book-header {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+.book-footer {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+
+    height: max-content;
+    margin-top: 15px;
+}
+
+.cta {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    flex: 1;
+    justify-content: center;
+    padding: .75em;
+    max-height: fit-content;
+
+    background-color: #8fa5b3;
 }
 
 .footer {
@@ -50,9 +118,9 @@ body {
     flex-direction: column;
     flex-wrap: wrap;
     flex: 1;
-    
+
     padding: 15px;
-    border: 1px solid black;
-    background-color: thistle;
-    min-height: 15px;
+    
+    background-color: #cb9e71;
+    box-shadow: 0px 5px 16px 0px rgba(0, 0, 0, 0.25);
 }
