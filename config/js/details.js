@@ -11,7 +11,7 @@ const params = new URLSearchParams(window.location.href);
 
 // Api call
 const cors = "https://noroffcors.herokuapp.com/";
-const API_url = `https://openlibrary.org/` +params;
+const API_url = `https://openlibrary.org/${params}.json`;
 
 const API = cors + API_url;
 
