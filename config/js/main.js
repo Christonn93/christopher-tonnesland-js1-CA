@@ -47,7 +47,7 @@ async function API_call() {
 
   
     <div class="btn-container">
-    <a href="../config/pages/details.html?${bookID}" class="cta">Read more</a>
+    <a href="../config/pages/details.html?isbn=${bookIsbn}" class="cta">Read more</a>
     </div>
     </div>
     </div>`;
