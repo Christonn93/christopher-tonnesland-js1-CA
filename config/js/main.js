@@ -44,8 +44,6 @@ async function API_call() {
     <div class="book-header">
     <h2>${bookTitle}</h2>
     <p>Author: ${bookAuthor}</p>
-
-  
     <div class="btn-container">
     <a href="../config/pages/details.html?isbn=${bookIsbn}" class="cta">Read more</a>
     </div>
