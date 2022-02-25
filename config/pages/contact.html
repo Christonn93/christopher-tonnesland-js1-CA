@@ -3,21 +3,51 @@
   <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <title>${title}</title>
+    <title></title>
     <meta name="description" content="" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="/config/style/style.css" />
   </head>
+
   <body>
     <div class="body-wrapper">
-      <header class="header">
-      </header>
+      <header class="header"></header>
       <main class="main">
-        <div class="container">
+        <div class="form-container">
+          <form>
+            <div class="form-header">
+              <h1>Contact us</h1>
+            </div>
+
+            <div class="form-body">
+              <div class="form-fields">
+                <label for="name">Name:</label>
+                <input id="name" type="text" required placeholder="Your Name" />
+              </div>
+
+              <div class="form-fields">
+                <label for="subject">Subject:</label>
+                <input id="subject" type="textarea" placeholder="Your subject" />
+              </div>
+
+              <div class="form-fields">
+                <label for="email">E-mail:</label>
+                <input id="email" type="email" placeholder="Your Email" />
+              </div>
+
+              <div class="form-fields">
+                <label for="adress">Adress:</label>
+                <input id="adress" type="text" placeholder="Your Adress" />
+              </div>
+            </div>
+            <div class="form-footer">
+              <button type="submit" class="cta-btn">Send</button>
+            </div>
+          </form>
         </div>
       </main>
       <footer class="footer"></footer>
     </div>
-    <script src="/config/js/main.js" type="module"></script>
+    <!-- <script src="/config/js/main.js" type="module"></script> -->
   </body>
 </html>
