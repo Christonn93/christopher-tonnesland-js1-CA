@@ -14,36 +14,42 @@
       <header class="header"></header>
       <main class="main">
         <div class="form-container">
-          <div class="pup-up"></div>
-          <form>
-            <div class="form-header">
+          <div class="pop-up"></div>
+          <form id="form">
+            <div>
               <h1>Contact us</h1>
             </div>
-
-            <div class="form-body">
-              <div class="form-fields">
-                <label for="name">Name:</label>
-                <input id="name" type="text" required placeholder="Your Name" />
-              </div>
-
-              <div class="form-fields">
-                <label for="subject">Subject:</label>
-                <input id="subject" type="textarea" placeholder="Your subject" />
-              </div>
-
-              <div class="form-fields">
-                <label for="email">E-mail:</label>
-                <input id="email" type="email" placeholder="Your Email" />
-              </div>
-
-              <div class="form-fields">
-                <label for="adress">Adress:</label>
-                <input id="adress" type="text" placeholder="Your Adress" />
-              </div>
+           <div>
+             <label>
+               Full name:*
+               <input name="fullName" id="fullName" placeholder="full name">
+             </label>
+             <div class="form-info" id="fullNameInfo">Please enter your full name</div>
+           </div>
+           <div>
+             <label>
+               Email:*
+               <input name="email" id="email" placeholder="email@email.com">
+              </label>
+              <div class="form-info" id="emailInfo">Email is required</div>
             </div>
-            <div class="form-footer">
-              <button type="submit" class="cta-btn">Send</button>
-            </div>
+            <div>
+              <label>
+                Adress:*
+                <input name="adress" id="adress" placeholder="adress">
+               </label>
+               <div class="form-info" id="adressInfo">Please enter your adress</div>
+             </div>
+             <div>
+              <label>
+                Subject:*
+                <textarea name="subject" id="subject"></textarea>
+               </label>
+               <div class="form-info" id="subjectInfo">Subject is required</div>
+             </div>
+             <div>
+               <button class="form-btn" id="submit">Submit</button>
+             </div>
           </form>
         </div>
       </main>
