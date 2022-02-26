@@ -1,6 +1,9 @@
 import { setHeader2 } from "./modules/header.js";
 import { setFooter } from "./modules/footer.js";
 
+//Changing the url
+
+
 // Declaring and setting the loading for the page
 const loading = document.querySelector(".loading");
 loading.innerHTML = `
@@ -67,24 +70,62 @@ async function API_call() {
     <article>${json.description}</article>
     </div>
     <div class="system-requirements">
-    <h4>System Requirements</h4>
-    <ul>
-    <li>Operating system: ${json.minimum_system_requirements.os || noInfo}</li>
-    <li>CPU: ${json.minimum_system_requirements.processor || noInfo}</li>
-    <li>GPU: ${json.minimum_system_requirements.graphics || noInfo}</li>
-    <li>RAM: ${json.minimum_system_requirements.memory || noInfo}</li>
-    <li>Storage: ${json.minimum_system_requirements.storage || noInfo}</li>
-    </ul>
+    <table>
+          <thead>
+            <h4>System Requirements</h4>
+          </thead>
+          <tbody>
+              <tr>
+                  <td>Operating system:</td>
+                  <td>${json.minimum_system_requirements.os || noInfo}</td>
+              </tr>
+              <tr>
+                  <td>CPU:</td>
+                  <td>${json.minimum_system_requirements.processor || noInfo}</td>
+              </tr>
+              <tr>
+                  <td>GPU:</td>
+                  <td>${json.minimum_system_requirements.graphics || noInfo}</td>
+              </tr>
+              <tr>
+                  <td>RAM:</td>
+                  <td>${json.minimum_system_requirements.memory || noInfo}</td>
+              </tr>
+              <tr>
+                  <td>Storage:</td>
+                  <td>${json.minimum_system_requirements.storage || noInfo}</td>
+              </tr>
+          </tbody>
+      </table>
     </div>
     <div class="publisher">
-    <h4>Other game details</h4>
-    <ul>
-      <li>Developer: ${json.developer || noInfo}</li>
-      <li>Publisher: ${json.publisher || noInfo}</li>
-      <li>Release: ${json.release_date || noInfo}</li>
-      <li>Platform: ${json.platform || noInfo}</li>
-      <li>Genre: ${json.genre || noInfo}</li>
-      </ul>
+    <table>
+    <thead>
+      <h4>Other game details</h4>
+    </thead>
+    <tbody>
+        <tr>
+            <td>Developer:</td>
+            <td>${json.developer || noInfo}</td>
+        </tr>
+        <tr>
+            <td>Publisher:</td>
+            <td>${json.publisher || noInfo}</td>
+        </tr>
+        <tr>
+            <td>Release:</td>
+            <td>${json.release_date || noInfo}</td>
+        </tr>
+        <tr>
+            <td>Platform:</td>
+            <td>${json.platform || noInfo}</td>
+        </tr>
+        <tr>
+            <td>Genre:</td>
+            <td>${json.genre || noInfo}</td>
+        </tr>
+    </tbody>
+</table>
     </div>
   </div>`;
   } catch (error) {

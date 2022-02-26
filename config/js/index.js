@@ -51,9 +51,11 @@ async function API_call() {
 
       // Displaying API result in the HTML
       container.innerHTML += `
-        <a href="./config/pages/details.html?id=${game_id}" id="${game_genre}">
+        <a href="./config/pages/details.html?id=${game_id}" class="image-link" id="${game_genre}">
         <div class="game-card">
-        <img src="${game_image}"/>
+        <div class="ratio-box">
+        <img src="${game_image}" class="image"/>
+        </div>
         <div class="card-info">
         <p>${game_title}</p>
         <p>Genre: ${game_genre}</p>
