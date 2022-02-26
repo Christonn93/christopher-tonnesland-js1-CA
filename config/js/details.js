@@ -1,8 +1,6 @@
 import { setHeader2 } from "./modules/header.js";
 import { setFooter } from "./modules/footer.js";
-
-//Changing the url
-
+import { displayError } from "./modules/error.js";
 
 // Declaring and setting the loading for the page
 const loading = document.querySelector(".loading");
@@ -113,7 +111,7 @@ async function API_call() {
             <td>${json.publisher || noInfo}</td>
         </tr>
         <tr>
-            <td>Release:</td>
+            <td>Release date:</td>
             <td>${json.release_date || noInfo}</td>
         </tr>
         <tr>
@@ -129,7 +127,10 @@ async function API_call() {
     </div>
   </div>`;
   } catch (error) {
-    console.log("error", error);
+   // Removing the loading animation
+   loading.innerHTML = ``;
+   console.log(error);
+   displayError();
   }
 }
 

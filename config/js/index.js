@@ -64,6 +64,8 @@ async function API_call() {
         </a>`;
     }
   } catch (error) {
+    // Removing the loading animation
+    loading.innerHTML = ``;
     console.log(error);
     displayError();
   }

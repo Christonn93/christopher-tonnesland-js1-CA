@@ -107,6 +107,29 @@ use {
     }
 }
 
+/* Error display */
+.error {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex: 1;
+
+    justify-content: center;
+}
+
+.error-container{
+    border: .25em solid #ff0000;
+    background-color: #F7F8F6;
+    padding: 15px;
+    box-shadow: 2px 2px 5px #ffffff;
+    margin: 0 auto;
+}
+
+.warning {
+    color: red;
+}
+
+
 /* Main Container */
 .container {
     display: grid;
@@ -176,8 +199,6 @@ use {
     flex-direction: column;
     flex-wrap: wrap;
     flex: 1;
-
-    margin: 0 250px;
 }
 
 .ratio-box {
@@ -236,9 +257,8 @@ use {
     padding: 15px;
 }
 
-ul {
-    list-style: none;
-    padding: 0;
+table > tbody > tr {
+    line-height: 30px;
 }
 
 /* Contact form */
@@ -357,15 +377,13 @@ ul {
         grid-template-columns: repeat(1, 1fr);
     }
 
-    .game-image {
-        margin: 0 0;
-    }
 }
 /* Small devices (portrait tablets and large phones, 600px and up) */
 @media only screen and (min-width: 600px) {
     .container {
         grid-template-columns: repeat(2, 1fr);
     }
+
 }
 /* Medium devices (landscape tablets, 768px and up) */
 @media only screen and (min-width: 1155px) {
