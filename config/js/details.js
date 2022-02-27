@@ -127,10 +127,10 @@ async function API_call() {
     </div>
   </div>`;
   } catch (error) {
-   // Removing the loading animation
-   loading.innerHTML = ``;
-   console.log(error);
-   displayError();
+    // Removing the loading animation
+    loading.innerHTML = ``;
+    console.log(error);
+    displayError();
   }
 }
 

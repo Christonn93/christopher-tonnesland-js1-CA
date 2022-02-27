@@ -1,7 +1,7 @@
-export function setDetails(){
-    const container = document.querySelector(".container");
+export function setDetails() {
+  const container = document.querySelector(".container");
 
-    container.innerHTML = `
+  container.innerHTML = `
     <div class="game-display">
     <h1>${json.title}</h1>
     <div class="ratio-box">
@@ -9,13 +9,8 @@ export function setDetails(){
     </div>
     <article>${json.description}</article>
     </div>`;
-
 }
 
-export function setGameList(){
-    const container = document.querySelector(".container");
-
-    
-
-  
+export function setGameList() {
+  const container = document.querySelector(".container");
 }
